@@ -1,0 +1,39 @@
+
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="box">
+        <div id="display"></div>
+        <div id="controls">
+            <button id="subtract">-</button>
+            <button id="reset">Reset</button>
+            <button id="add">+</button>
+        </div>
+    </div>
+</body>
+<script>
+let display = document.getElementById("display");
+let add = document.getElementById("add");
+let reset = document.getElementById("reset");
+let subtract = document.getElementById("subtract");
+
+let displayText=0;
+display.textContent = displayText;
+add.onclick = function(){
+    displayText++;
+    display.textContent = displayText;
+}
+subtract.onclick = function(){
+    displayText--;
+    display.textContent = displayText;
+}
+reset.onclick = function(){
+    displayText=0;
+    display.textContent = displayText;
+}
+
+</script>
+</html>
