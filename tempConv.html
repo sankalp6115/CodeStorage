@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <label for="temp" id="tempLabel">Enter Temp in chosen unit</label><br>
+        <input type="text" id="temp"><br>
+        <input type="radio" id="celToFah" name="conversion">
+        <label for="celToFah">celToFah</label><br>
+        <input type="radio" id="fahToCel" name="conversion">
+        <label for="fahToCel">fahToCel</label><br>
+        <button id="submit" type="submit">Submit</button>
+
+        <div id="answer"></div>
+
+    </div>
+</body>
+<script>
+    let tempInput=document.getElementById("temp");
+    let celToFah = document.getElementById("celToFah");
+    let fahToCel = document.getElementById("fahToCel");
+    let submitBtn= document.getElementById("submit");
+    let answerField = document.getElementById("answer");
+    
+    submitBtn.onclick = function(){
+        let temp=document.getElementById("temp").value;
+        if(fahToCel.checked){
+            answer = (5/9)*(temp-32);
+        }
+        else if(celToFah.checked){
+            answer = ((9/5)*temp)+32;
+        }
+        answerField.textContent = answer;
+    }
+
+</script>
+</html>

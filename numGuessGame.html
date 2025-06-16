@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const min=1;
+    const max=10;
+
+    const randomNum = Math.floor(Math.random() * (max-min)) + min;
+
+    let guess = window.prompt(`Guess number between ${min} and ${max}.`); 
+    console.log(randomNum);
+    if(isNaN(guess)){console.log("Wrong Input")};
+    if(guess==randomNum){
+        console.log("You won nothing");
+    }
+    else{console.log("You lost nothing")};
+</script>
+</html>
